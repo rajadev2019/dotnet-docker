@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vlabdevops-deployment-ranajit
+  labels:
+    app: vlabdevopsranajit
+spec:
+  replicas: 1
+  selector:
+       matchLabels:
+         app: vlabdevopsranajit
+  template:
+    metadata:
+      name: vlabdevopsranajit
+      labels:
+        app: vlabdevopsranajit
+    spec:
+      containers:
+      - name: vlabdevopsranajit
+        image: ranajitkoleytcs/vlab-devops:latest
+        resources:
+          limits:
+            memory: 1Gi
+            cpu: "0.5"
+          requests:
+            memory: 256Mi
+            cpu: "0.25"
+        ports:
+          - containerPort: 8080
+            protocol: TCP
+        env:
+          - name: BASE_PATH
+            value: /ranajit/vlabdevops
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: vlabdevopsranajit
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vlabdevopsranajit
+spec:
+  selector:
+    app: vlabdevopsranajit
+  ports:
+    - port: 8080
+      targetPort: 80
+  type: LoadBalancer
