@@ -23,7 +23,7 @@ spec:
             memory: 1Gi
             cpu: "0.5"
           requests:
-            memory: 256Mi
+            memory: 512Mi
             cpu: "0.25"
         ports:
           - containerPort: 8080
