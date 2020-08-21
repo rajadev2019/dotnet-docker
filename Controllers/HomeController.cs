@@ -9,13 +9,13 @@ using dotnet_docker.Models;
 
 namespace dotnet_docker.Controllers
 {
-    public class HomeController : Controlle
+    public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger
+            _logger = logger;
         }
 
         public IActionResult Index()
