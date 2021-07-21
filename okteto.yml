@@ -2,5 +2,8 @@
 name: dotnet-docker
 image: okteto/dotnet-docker
 command: [ "dotnet", "run" ]
+workdir: /app
 persistentVolume:
   enabled: false
+#environment:
+  #- ASPNETCORE_ENVIRONMENT=Development
