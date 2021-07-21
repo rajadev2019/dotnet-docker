@@ -1,0 +1,6 @@
+  
+name: dotnet-docker
+image: okteto/dotnet-docker
+command: [ "dotnet", "run" ]
+persistentVolume:
+  enabled: false
