@@ -1,6 +1,6 @@
   
 name: dotnet-docker
-image: okteto.dev/dotnet-docker
+image: ranajitcse2009/dotnet-docker
 environment:
   - ASPNETCORE_ENVIRONMENT=Development
 command: [ "dotnet", "watch", "run" ]
