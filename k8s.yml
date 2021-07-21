@@ -15,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: api
-        image: okteto/dotnet-docker
+        image: okteto.dev/dotnet-docker
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
