@@ -1,6 +1,6 @@
 deploy:
   - okteto login --token Jbj9sIlp2OOFkn843rsK4WLbfVeKi7Rw5R7nnvoA0ACSSJ6d
-  - okteto build -t ranajitcse2009/dotnet-docker .
+  - okteto build -t registry.cloud.okteto.net/ranajitcse2009/dotnet-docker .
   - kubectl apply -f k8s.yml
 devs:
   - okteto.yml
