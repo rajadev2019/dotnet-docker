@@ -1,4 +1,5 @@
 deploy:
+  - okteto login --token Jbj9sIlp2OOFkn843rsK4WLbfVeKi7Rw5R7nnvoA0ACSSJ6d
   - kubectl apply -f k8s.yml
 devs:
   - okteto.yml
